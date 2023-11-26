@@ -22,7 +22,6 @@ export default class TelaLogin extends React.Component {
     const errorMessage = error.message;
     alert("Preencha os Campos")
   });
-
     }
   render(){
     return (

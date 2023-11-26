@@ -10,15 +10,12 @@ export default class TelaCarrinho extends React.Component {
     }
     excluirItem(item){
       var novosItens = [...this.state.array]
-
       if(novosItens.length == 1 ){
           novosItens = [];
-          
       }
       else{
          novosItens.splice(item.id,1);
       }
-     
       this.setState({array:novosItens})
     }
 
@@ -27,17 +24,17 @@ export default class TelaCarrinho extends React.Component {
       <View style={{flex:1,backgroundColor:'black'}}>  
       
         <View style={{backgroundColor:'black'}}>
-            <Text style={{fontSize:30,color:'yellow',marginLeft:80}}>ITENS ADICIONADOS AO CARRINHO APARECERÃO AQUI!!</Text>    
+            <Text style={{fontSize:25,color:'yellow',marginLeft:45}}>ITENS ADICIONADOS AO CARRINHO IRAM APARECER AQUI!!</Text>    
         </View>
         
-      <FlatList style={{marginTop:20,}} data={this.state.array} 
+    <FlatList style={{marginTop:15,}} data={this.state.array} 
       renderItem={({item}) =>
           <View style={{fontSize:50,alignItems:'center',margin:10,}}>
-            <Image style={{width:120,height:120}} source={require("./assets/Kit_suspensao_a_ar.jpg")}></Image>
+            <Image style={{width:120,height:120}} source={require("./assets/Kit_suspensao_a_ar.jpg")} ></Image>  
               <Text style={{color:'white'}}>{item.descricao}{'\n'}{item.preco}</Text>
               <Button title='Tirar do carrinho' color='red' onPress={()=> this.excluirItem(item)}></Button>
             </View>}>                         
-      </FlatList> 
+    </FlatList> 
 
 
     {/*<View style={{flex:1,justifyContent:'flex-start',backgroundColor:'black',marginLeft:150}}>

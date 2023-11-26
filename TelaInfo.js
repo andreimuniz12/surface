@@ -37,7 +37,7 @@ export default class TelaLista extends React.Component {
                 <View style={{flex:3,flexDirection:'row',backgroundColor:'#101010',justifyContent:'center',flexWrap:"wrap"}}>
 
                     <View style={{backgroundColor:'#101010'}}>
-                        <Image style={{width:120,height:120}}  source={require("./assets/suspensão.png")}></Image>
+                        <Image style={{width:120,height:120}}  source={require("./assets/suspensao.jpg")}></Image>
                         <Text style={{fontSize:15,color:'white'}}>Kit Suspensão a ar v9 ultra</Text>
                         <Text style={{fontSize:15,color:'white'}}>R$1500</Text>
                         <Button title={"Adicionar no \n carrinho"} onPress={()=>this.gerenciaProd('kit suspensão a ar','R$1500')}></Button>

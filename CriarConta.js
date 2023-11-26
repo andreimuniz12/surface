@@ -7,21 +7,21 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 export default class CriarConta extends React.Component {
     constructor(props){
         super(props)
-        this.state = {email:"",password:"" }
+        this.state = {email: "",password: ""}
     }
   criarConta(){
     const auth = getAuth();
-  createUserWithEmailAndPassword(auth, this.state.email, this.state.password).then((userCredential) => {
+    createUserWithEmailAndPassword(auth, this.state.email,this.state.password).then((userCredential) => {
     const user = userCredential.user;
-    this.props.navigation.navigate('Login')
+    this.props.navigation.navigate('Login'); 
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
   });  
 }
-
-  render(){
+  
+render(){
     return (
     <View style={{flex:2,backgroundColor:'#101010'}}>
         <View style={{backgroundColor:'#101010',marginTop:15}}>
@@ -49,7 +49,6 @@ export default class CriarConta extends React.Component {
             </TouchableOpacity>
             
           </View>
-
         </View>
      
   );
